@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphs Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <h1>🎨 Graphs Simulator</h1>
+    </header>
 
+    <div class="container">
+        <aside class="controls-panel">
+            <h2>Input Equation (Y)</h2>
+            <p>ใส่สมการทางคณิตศาสตร์ของคุณ</p>
+            
+            <label for="equationInput">Equation:</label>
+            <textarea id="equationInput" placeholder="y = ..."></textarea>
+            
+            <button id="plotButton">Graph Equation</button>
+
+            <div class="difficulty-selection">
+                <h3>Difficulty/Mode:</h3>
+                <select id="gameMode">
+                    <option value="test_slope">Test Slope (Linear)</option>
+                    <option value="solve_intersection">Find Intersection (Advanced)</option>
+                    <option value="visualize">Pure Visualization</option>
+                </select>
+            </div>
+
+            <p id="feedbackMessage" class="message"></p>
+        </aside>
+
+        <main class="graph-area">
+            <!-- Using a canvas element is best for drawing math graphs in JS -->
+            <canvas id="mathGraphCanvas" width="800" height="500"></canvas>
+        </main>
+    </div>
+
+    <!-- We will link the script here after adding potential libraries -->
+    <script src="script.js"></script>
+
+    <!-- คัดลอกส่วน Footer นี้ไปวางไว้ล่างสุดของ Body -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2026 Graphs Simulator Game | พัฒนาเพื่อการเรียนรู้คณิตศาสตร์</p>
+            <div class="footer-links">
+                <span>ผู้พัฒนา: KBK-SYSTEMS [NK-GIFTED]</span> | 
+                <a href="https://www.tci-thaijo.org/issues/physical02-17487" target="_blank">งานวิจัยที่เกี่ยวข้อง</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

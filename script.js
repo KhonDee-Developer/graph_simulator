@@ -145,7 +145,7 @@ function startNewLevel() {
             
             // แสดงคำใบ้แกะสูตรให้อ่านง่ายขึ้น
             const aSign = a === 1 ? "" : "-";
-            gameState.hint = `คำใบ้: รูปแบบจุดยอดคือ y = ${aSign}(x - ${h})^2 + ${k}`;
+            gameState.hint = `คำใบ้: รูปแบบจุดยอดคือ y = ${aSign}(x - ${h})**2 + ${k}`;
             questBox.innerHTML = `<strong>โจทย์ (Parabola):</strong> วาดกราฟเส้นโค้งให้ทับเส้นเป้าหมายสีน้ำเงินให้ได้`;
         }
     } 

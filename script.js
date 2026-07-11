@@ -161,7 +161,7 @@ function startNewLevel() {
         gameState.target = null;
         gameState.hint = `💡 สูตรน่าลอง: <br>
                           • กราฟโค้ง: <code>x ** 2</code> หรือ <code>-(x ** 2) + 4</code><br>
-                          • กราฟคลื่น: <code>Math.sin(x) * 2</code><br>
+                          • กราฟคลื่น: <code>sin(x) * 2</code><br>
                           • กำลังสองสมบูรณ์: <code>(x + 3) * (x - 1)</code><br>
                           • กราฟเศษส่วน: <code>1 / x</code> หรือ <code>1 / (x-2)</code><br>
                           • กรารากที่สอง: <code>sqrt(x)</code> หรือ <code>x ** (1/2)</code><br>

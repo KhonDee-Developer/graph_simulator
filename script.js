@@ -15,7 +15,7 @@ let gameState = {
     score: 0,
     target: null, // เก็บค่าเป้าหมายของแต่ละโหมด
     hint: '',
-    timeLeft: 120, // 120 วินาทีต่อด่าน    
+    timeLeft: 180, // 180 วินาทีต่อด่าน    
     timerInterval: null 
 };
 
@@ -56,7 +56,7 @@ function setupGameUI() {
         <div style="background: #eef2f7; padding: 12px; border-radius: 6px; margin: 15px 0; border-left: 5px solid #3498db;">
             <div style="display:flex; justify-content:space-between; font-weight:bold; margin-bottom: 5px;">
                 <span>🎯 คะแนน: <span id="scoreBoard">0</span></span>
-                <span style="color: #e74c3c;">⏱️ เวลา: <span id="timerBoard">120</span> วินาที</span>
+                <span style="color: #e74c3c;">⏱️ เวลา: <span id="timerBoard">180</span> วินาที</span>
             </div>
             <div style="display:flex; justify-content:space-between; font-weight:bold;">
                 <span></span>
@@ -79,7 +79,7 @@ function startTimer() {
         return;
     }
     
-    gameState.timeLeft = 120; // 120 วินาทีสำหรับแต่ละด่าน
+    gameState.timeLeft = 180; // 180 วินาทีสำหรับแต่ละด่าน
     document.getElementById('timerBoard').textContent = gameState.timeLeft;
     
     gameState.timerInterval = setInterval(() => {
@@ -96,7 +96,7 @@ function startTimer() {
 function handleTimeOut() {
     feedbackMessage.className = "message";
     feedbackMessage.style.color = "#d35400";
-    feedbackMessage.innerHTML = `⏰ <strong>หมดเวลาแล้ว!</strong> ด่านถัดไปกำลังจะเริ่ม... <br><small style="color:#7f8c8d">${gameState.hint}</small>`;
+    feedbackMessage.innerHTML = `⏰ <strong>หมดเวลาแล้วท่าน!</strong> ด่านถัดไปกำลังจะเริ่ม... <br><small style="color:#7f8c8d">${gameState.hint}</small>`;
     
     plotButton.disabled = true;
     setTimeout(() => {
@@ -163,8 +163,8 @@ function startNewLevel() {
                           • กราฟโค้ง: <code>x ** 2</code> หรือ <code>-(x ** 2) + 4</code><br>
                           • กราฟคลื่น: <code>sin(x) * 2</code><br>
                           • กำลังสองสมบูรณ์: <code>(x + 3) * (x - 1)</code><br>
-                          • กราฟเศษส่วน: <code>1 / x</code> หรือ <code>1 / (x-2)</code><br>
-                          • กรารากที่สอง: <code>sqrt(x)</code> หรือ <code>x ** (1/2)</code><br>
+                          • กราฟเศษส่วน: <code>1 / x</code> หรือ <code>1 / (x - 2)</code><br>
+                          • กรารากที่สอง: <code>sqrt(x)</code> หรือ <code>x ** (1 / 2)</code><br>
                           • กราฟค่าสัมบูรณ์: <code>abs(x)</code>`;
         
         questBox.innerHTML = `<strong>วิธีเล่นโหมดอิสระ:</strong> พิมพ์สมการคณิตศาสตร์อะไรก็ได้เพื่อดูรูปทรงของเส้นกราฟได้อย่างอิสระ ไม่มีถูกผิด!`;
